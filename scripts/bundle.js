@@ -30302,6 +30302,35 @@ module.exports = About;
 
 var React = require('react');
 
+var Header = React.createClass({displayName: "Header",
+	render: function () {
+		return (
+			React.createElement("nav", {className: "navbar navbar-expand-lg navbar-light bg-light"}, 
+                React.createElement("div", {className: "container-fluid collapse navbar-collapse"}, 
+                    React.createElement("a", {href: "/", className: "navbar-brand"}, 
+                        React.createElement("img", {src: "images/pluralsight-logo.png", alt: "image"})
+                    ), 
+                    React.createElement("ul", {className: "navbar-nav mr-auto"}, 
+                        React.createElement("li", {className: "nav-item active"}, 
+                            React.createElement("a", {className: "nav-link", href: "/"}, "Home")
+                        ), 
+                        React.createElement("li", {className: "nav-item"}, 
+                            React.createElement("a", {className: "nav-link", href: "/#about"}, "About")
+                        )
+                    )
+                )
+            )
+		); 
+	}
+});
+
+module.exports = Header;
+
+},{"react":157}],160:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
 var Home = React.createClass({displayName: "Home",
     render: function() {
         return (
@@ -30315,11 +30344,12 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":157}],160:[function(require,module,exports){
+},{"react":157}],161:[function(require,module,exports){
 $ = jQuery = require('jquery');
 var React = require('react');
 var Home = require('./components/homePage');
 var About = require('./components/about/aboutPage');
+var Header = require('./components/common/header');
 
 (function(win) {
     "use strict";
@@ -30333,6 +30363,7 @@ var App = React.createClass({displayName: "App",
         }
         return (
             React.createElement("div", null, 
+                React.createElement(Header, null), 
                 React.createElement(Child, null)
             )
         );
@@ -30350,4 +30381,4 @@ render();
 
 }(window));
 
-},{"./components/about/aboutPage":158,"./components/homePage":159,"jquery":1,"react":157}]},{},[160]);
+},{"./components/about/aboutPage":158,"./components/common/header":159,"./components/homePage":160,"jquery":1,"react":157}]},{},[161]);
