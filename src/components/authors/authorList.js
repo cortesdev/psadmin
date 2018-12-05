@@ -17,7 +17,7 @@ var AuthorList = React.createClass({
         };
         
         return (
-            <div>
+            <div className="countainer-fluid">
                  <table className="table">
                     <thead>
                         <th>ID</th>
