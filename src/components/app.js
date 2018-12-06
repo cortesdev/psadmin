@@ -2,8 +2,10 @@
 
 var React = require('react');
 var Header = require('./common/header');
+var Footer = require('./common/footer');
 var RouteHandler = require('react-router').RouteHandler;
 $ = jQuery = require('jquery');
+var Bootstrap = require('bootstrap');
 
 var App = React.createClass({
 	render: function() {
@@ -13,6 +15,7 @@ var App = React.createClass({
 				<div className="container-fluid">
 					<RouteHandler/>
 				</div>
+				<Footer/>
 			</div>
 		);
 	}
