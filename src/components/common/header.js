@@ -20,11 +20,14 @@ var Header = React.createClass({
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">                  
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
+                        <li className="nav-item">
                             <Link className="nav-link" to="app">Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="authors">Authors</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="courses">Courses</Link>
                         </li>
                         <li className="nav-item">
                            <Link className="nav-link" to="about">About</Link>
